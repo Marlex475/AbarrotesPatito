@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Órdenes de Compra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Registro de Órdenes de Compra</h1>
+        
+        <button class="btn btn-secondary mb-4" onclick="window.location.href='index.html'">Regresar</button>
+        
+        <div class="form-group">
+            <input type="text" class="form-control" id="busquedaProducto" placeholder="Buscar producto">
+        </div>
+        
+        <button class="btn btn-primary mb-4" onclick="buscarProducto()">Buscar</button>
+        
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                </tr>
+            </thead>
+            <tbody id="productosTabla">
+                <!-- Productos se mostrarán aquí -->
+            </tbody>
+        </table>
+        
+        
+        <button class="btn btn-success" onclick="generarFactura()">Generar Factura</button>
+        <p id="mensajeCompra" class="mt-3"></p>
+    </div>
+
+    <script src="ordenesCompra.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
